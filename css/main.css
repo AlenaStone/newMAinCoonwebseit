@@ -92,12 +92,10 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
-  .header-main {
-      height: 70vh; /* Минимальная высота для маленьких экранов */
-  }
+
 
   .text-container {
-      margin-top: 15%;
+      margin-top:10rem;
       padding: 15px 8px;
   }
 

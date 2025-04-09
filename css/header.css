@@ -82,7 +82,7 @@
       top: 0;
       left: -100%;
       width: 70%;
-      height: 100vh;
+      height: 92vh;
       background: linear-gradient(135deg, #3e8ed0 0%, #5ba4cf 100%); /* Тот же градиент для мобильного меню */
       flex-direction: column;
       gap: 20px;
