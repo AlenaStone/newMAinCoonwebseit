@@ -1,0 +1,113 @@
+.header-main {
+  background-image: url('../img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 110vh;
+ 
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #f2f6ff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+
+
+.header-content {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  color: white;
+  text-align:center;
+  z-index: 1; /* Размещение поверх фона */
+}
+.text-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Белая подложка с прозрачностью */
+  padding: 30px 10px;
+  border-radius: 8px; /* Скругленные углы */
+  max-width: 600px; /* Максимальная ширина */
+  width: 100%; /* Чтобы адаптировалось под экран */
+  margin-left: 10%; /* Отступ от левого края */
+  margin-top: 15%; /* Отступ сверху */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.header-content h1 {
+  margin: 2rem;
+  font-size: 2.5em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  color: #333; /* Цвет текста */
+}
+
+
+.main-button {
+  padding: 14px 35px;
+  font-size: 18px;
+  background-color: #3e8ed0;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  
+ 
+}
+.main-button:hover {
+  background-color: #2b6aad;
+}
+
+
+@media (max-width: 768px) {
+  .header-main {
+      height: 80vh; /* Еще меньше высота для мобильных */
+  }
+
+  .text-container {
+      max-width: 90%;
+      margin: 0 auto; /* Центрируем текстовый контейнер */
+      margin-top: 50%;
+      padding: 20px 10px;
+  }
+
+  .header-content h1 {
+      font-size: 1.8em;
+      margin: 1rem;
+  }
+
+  .main-button {
+      padding: 10px 25px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main {
+      height: 70vh; /* Минимальная высота для маленьких экранов */
+  }
+
+  .text-container {
+      margin-top: 15%;
+      padding: 15px 8px;
+  }
+
+  .header-content h1 {
+      font-size: 1.5em;
+      margin: 0.8rem;
+  }
+
+  .main-button {
+      padding: 8px 20px;
+      font-size: 12px;
+  }
+}

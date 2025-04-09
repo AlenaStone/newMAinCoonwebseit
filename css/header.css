@@ -1,0 +1,135 @@
+.main-header {
+  background-color: rgba(62, 142, 208, 0.7);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+.header-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 60px;
+  display: block;
+}
+
+.menu {
+  margin: 0 auto;
+  padding: 0 2%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.menu a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #3e8ed0 0%, #5ba4cf 100%); /* Голубо-синий градиент */
+}
+
+.menu a:hover {
+  color: #e0e8f0;
+  background: linear-gradient(90deg, #2b6aad 0%, #4a8fc2 100%); /* Темнее при наведении */
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Медиа-запросы для бургер-меню */
+@media (max-width: 768px) {
+  .menu-icon {
+      display: flex;
+  }
+
+  .menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100vh;
+      background: linear-gradient(135deg, #3e8ed0 0%, #5ba4cf 100%); /* Тот же градиент для мобильного меню */
+      flex-direction: column;
+      gap: 20px;
+      padding: 60px 20px 20px;
+      display: flex;
+      transition: left 0.3s ease;
+      z-index: 999;
+  }
+
+  .menu a {
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .menu-toggle:checked ~ .menu {
+      left: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .menu-toggle:checked + .menu-icon span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .header-top {
+      padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+      width: 80%;
+  }
+
+  .logo img {
+      height: 50px;
+  }
+
+  .header-top {
+      padding: 10px 15px;
+  }
+}
