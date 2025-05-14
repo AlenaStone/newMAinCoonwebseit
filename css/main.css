@@ -69,6 +69,8 @@ h1, h2, h3 {
 
 
 @media (max-width: 768px) {
+ 
+
   .header-main {
       height: 80vh; /* Еще меньше высота для мобильных */
       background-size: keep-cover; /* Сохраняем пропорции */
@@ -89,6 +91,9 @@ h1, h2, h3 {
   .main-button {
       padding: 10px 25px;
       font-size: 14px;
+  }
+   * {
+    box-sizing: border-box;
   }
 }
 

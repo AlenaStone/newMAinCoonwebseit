@@ -139,6 +139,9 @@ main {
   .cat-card img {
       height: 360px;
   }
+   * {
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 480px) {
