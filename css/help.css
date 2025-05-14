@@ -53,11 +53,27 @@ details {
   background: #f5faff;
   padding: 1rem 1.2rem;
   box-shadow: 2px 2px 5px rgba(62, 142, 208, 0.1);
+    overflow: hidden;
   transition: all 0.3s ease;
 }
 
+
 details[open] {
   background-color: #eaf5ff;
+}
+
+.details-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+details[open] .details-content {
+  /* fallback max-height if JS is disabled */
+  max-height: 1000px;
+}
+details.active summary {
+  color: #2d6ea5;
+  text-decoration: underline;
 }
 
 details summary {
@@ -92,6 +108,7 @@ details p {
   line-height: 1.5;
   color: #444;
 }
+
 
 /* Кнопка */
 .button-container {
@@ -166,4 +183,35 @@ details:nth-of-type(9) p::before {
   max-width: 500px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  details summary {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+  }
+
+  .details-content {
+    font-size: 0.95rem;
+    padding: 0.8em 1em;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+    margin-top: 1em;
+  }
+
+  button, a.button {
+    font-size: 1rem;
+    padding: 0.6em 1em;
+  }
+
+  /* Убираем лишние отступы */
+  * {
+    box-sizing: border-box;
+  }
 }
