@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <header class="main-header">
         <div class="header-top">
@@ -41,23 +43,28 @@
         <section class="cats-gallery">
             <div class="cat-card">
                 <img src="img/hrusha.jpg" alt="Томас">
-                
+
                 <div class="cat-info">
-                    <h3>Мурзик</h3>
+                    <h3>Архат Локум</h3>
                     <p>Пол: Мужской</p>
-                    <p>Возраст: 3 года</p>
+                    <p>Возраст: 4 года</p>
                     <p>Окрас: Черный мрамор</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <a href="#" class="cat-button" onclick="openModal('lokum')">Посмотреть родословную</a>
+
                 </div>
             </div>
+            
+
+
             <div class="cat-card">
                 <img src="img/zaika.JPG" alt="Зайка">
                 <div class="cat-info">
-                    <h3>Барсик</h3>
+                    <h3>Замбия</h3>
                     <p>Пол: Женский</p>
-                    <p>Возраст: 2 года</p>
-                    <p>Окрас: Рыжий табби</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <p>Возраст: 4 года</p>
+                    <p>Окрас: Голубой табби с белым</p>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
@@ -67,17 +74,19 @@
                     <p>Пол: Мужской</p>
                     <p>Возраст: 1 год</p>
                     <p>Окрас: Голубой солид</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
                 <img src="img/ponka.JPG" alt="Луна">
                 <div class="cat-info">
-                    <h3>Луна</h3>
+                    <h3>Пандора</h3>
                     <p>Пол: Женский</p>
                     <p>Возраст: 4 года</p>
-                    <p>Окрас: Кремовый</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <p>Окрас: Рыжий биколор</p>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
@@ -87,7 +96,8 @@
                     <p>Пол: Мужской</p>
                     <p>Возраст: 5 лет</p>
                     <p>Окрас: Красный мрамор</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
@@ -97,17 +107,19 @@
                     <p>Пол: Женский</p>
                     <p>Возраст: 3 года</p>
                     <p>Окрас: Черепаховый</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
                 <img src="img/varka.jpg" alt="Лео">
                 <div class="cat-info">
-                    <h3>Лео</h3>
-                    <p>Пол: Мужской</p>
-                    <p>Возраст: 2 года</p>
-                    <p>Окрас: Черный дым</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <h3>Варвара Леоланд</h3>
+                    <p>Пол: Женский</p>
+                    <p>Возраст: 5 лет</p>
+                    <p>Окрас: Черная черепаха</p>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
@@ -117,19 +129,21 @@
                     <p>Пол: Женский</p>
                     <p>Возраст: 1 год</p>
                     <p>Окрас: Белый</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <a href="#" class="cat-button">Посмотреть родословную</a>
+
                 </div>
             </div>
             <div class="cat-card">
-                
-                <img src="img/kitte.JPG" alt="Мурзик">
+                <img src="img/kitte.JPG" alt="Котята">
                 <div class="cat-info">
                     <h3>Новые котята</h3>
-                    
-                    <p>Тут можно посмотреть свободных котят</p>
-                    <a href="#" class="cat-button">Узнать больше</a>
+                    <p>Сейчас у нас нет свободных котят.<br>Следите за обновлениями в нашем Instagram или свяжитесь с
+                        нами напрямую.</p>
+                    <a href="https://www.instagram.com/shinyleo_tribe/" class="cat-button" target="_blank">Instagram
+                        питомника</a>
                 </div>
             </div>
+
         </section>
     </main>
 
@@ -141,21 +155,56 @@
         </ul>
         <ul class="footer-social">
             <li>
-                <a href="https://instagram.com/shinyleo_tribe" class="social-icon__link" target="_blank" aria-label="Instagram">
+                <a href="https://instagram.com/shinyleo_tribe" class="social-icon__link" target="_blank"
+                    aria-label="Instagram">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1 1 0 100 2 1 1 0 000-2z"/>
+                        <path
+                            d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1 1 0 100 2 1 1 0 000-2z" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a href="https://www.facebook.com/shinyleo.tribe" class="social-icon__link" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/shinyleo.tribe" class="social-icon__link" target="_blank"
+                    aria-label="Facebook">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7A10 10 0 0022 12z"/>
+                        <path
+                            d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7A10 10 0 0022 12z" />
                     </svg>
                 </a>
             </li>
         </ul>
         <p>© 2025 Мой проект. Все права защищены.</p>
     </footer>
+    <div id="modal-lokum" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('lokum')">&times;</span>
+    <h2>Родословная Архата Локума</h2>
+    <table class="pedigree-table">
+      <tr>
+        <th>Поколение</th>
+        <th>Отец</th>
+        <th>Мать</th>
+      </tr>
+      <tr>
+        <td>1 (родители)</td>
+        <td>Ch. Pillowtalk's Koulo<br><small>серебристый тикированный биколор</small></td>
+        <td>Snow Spirit's Pesnya Severa<br><small>черепаховый серебристый мраморный</small></td>
+      </tr>
+      <tr>
+        <td>2 (бабушки и дедушки)</td>
+        <td>
+          Pillowtalk's Saturday Night Fever<br><small>серебристый тикированный с белым</small><br>
+          Pillowtalk's Hex Hex<br><small>черепаховый дымчатый с белым</small>
+        </td>
+        <td>
+          Ch. Balagur Crystal Jam<br><small>красный мраморный</small><br>
+          Ch. Tiger Snow Spirit's Estrella<br><small>красный мраморный</small>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+  <script src="js/cat.js" defer></script>
 </body>
+
 </html>
