@@ -5,159 +5,100 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShinyLeo Tribe</title>
-  <link href="kontakt.css" rel="stylesheet">
+  <title>ShinyLeo Tribe - Производители</title>
+  <link href="css/kontakt.css" rel="stylesheet">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+</head>
 
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
-  <script type="text/javascript">
-jQuery(function($){
-   $("#phone").mask("+7 (999) 999-9999");
-   $("#phone2").mask("+7 (999) 999-9999");
-});
-</script>
-
-<header class="main-header">
-  <div class="header-top">
-    <div class="logo">
-      <a href="#"><img src="img/logo.png" alt="Логотип" /></a>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Логотип" /></a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="menu">
+        <a href="index.html">Главная</a>
+        <a href="cats.html">Производители</a>
+        <a href="help.html">Помощь</a>
+        <a href="about.html">О нас</a>
+        <a href="kontakt.html">Контакты</a>
+      </nav>
     </div>
+  </header>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+  <main class="contact-container">
+    <h1>Связаться с нами</h1>
+    <p>Если у вас есть вопросы по котятам, сотрудничеству или хотите просто узнать больше информации — заполните форму ниже. Мы
+      обязательно ответим!</p>
 
-    <nav class="menu">
-      <a href="main.html">Главная</a>
-      <a href="cats.html">Производители</a>
-      <a href="help.html">Помощь</a>
-      <a href="about.html">О нас</a>
-      <a href="kontakt.html">Контакты</a>
-    </nav>
-  </div>
-</header>
+    <form action="https://formspree.io/f/xgvkreqp" method="POST" class="contact-form" id="contactForm">
+      <label for="name">Ваше имя:</label>
+      <input type="text" id="name" name="name" placeholder="Например, Светлана" required>
 
-<main class = "main">
-  <div class = "person">
-  <div class="avatar">
-    <img src="selfi.jpg">
-  </div>
- <div class="infos">
-   <h1> Стрибная Светлана Львовна</h1>
-   <ul class = "info">
-   <li>+79185209693</li>
-     <li>assa5@yandex.ru</li>
-     <li>Ростовская область, г.Батайск</li>
-   </ul>
- </div>
-  </div>
+      <label for="number">Ваш номер телефона:</label>
+      <input type="number" id="number" name="number" placeholder="+7 xxx xxx-xx-xx" required>
 
+      <label for="topic">С чем связан вопрос?</label>
+      <select id="topic" name="topic" required>
+        <option value="" disabled selected>Выберите вариант</option>
+        <option value="availability">Вопрос о котах в наличии</option>
+        <option value="info">Получение информации</option>
+        <option value="care">Вопрос об уходе</option>
+        <option value="chosen">Мы выбрали кота</option>
+      </select>
 
-  <div id="inline">
-    <h2 class="onl">Онлайн заявка</h2>
-      <form id="contact" action="#" method="post" name="contact">
-      <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
-      <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон">
-      <input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail">
-      <textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea><button id="send">Отправить</button></form></div>
-  </div>
+      <div id="chosenCatField" style="display: none;">
+        <label for="catName">Понравившийся кот:</label>
+        <input type="text" id="catName" name="catName" placeholder="Имя кота или ссылка на фото">
+      </div>
 
-  <script type="text/javascript">
-  function validateEmail(email) {
-    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return reg.test(email);
-  }
+      <label for="message">Ваше сообщение:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
 
-  $(document).ready(function() {
-    $("#contact").submit(function() { return false; });
-    $("#send").on("click", function(){
-      var emailval  = $("#email").val();
-      var namevl  = $("#name").val();
-      var phonevl  = $("#phone").val();
-      var msgval    = $("#msg").val();
-      var msglen    = msgval.length;
-      var mailvalid = validateEmail(emailval);
+      <button type="submit">Отправить</button>
+    </form>
+  </main>
 
-      if(mailvalid == false) {
-        $("#email").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#email").removeClass("error");
-      }
-  if(mailvalid == false) {
-        $("#name").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#name").removeClass("error");
-      }
-      if(mailvalid == false) {
-        $("#phone").addClass("error");
-      }
-      else if(mailvalid == true){
-        $("#phone").removeClass("error");
-      }
-      if(msglen < 4) {
-        $("#msg").addClass("error");
-      }
-      else if(msglen >= 4){
-        $("#msg").removeClass("error");
-      }
+  <footer class="footer">
+    <ul class="footer-nav">
+      <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+      <li class="menu__item"><a class="menu__link" href="kontakt.html">Контакты</a></li>
+      <li class="menu__item"><a class="menu__link" href="help.html">Помощь</a></li>
+    </ul>
 
-      if(mailvalid == true && msglen >= 4) {
-        // если обе проверки пройдены
-        // сначала мы скрываем кнопку отправки
-        $("#send").replaceWith("<em>Oтправка...</em>");
-        $.ajax({
-          type: 'POST',
-          url: 'sendmessage.php',
-          data: $("#contact").serialize(),
-          success: function(data) {
-            if(data == "true") {
-              $("#contact").fadeOut("fast", function(){
-                $(this).before("<p><strong>Успешно! Ваше сообщение отправлено  :)</strong></p>");
-                setTimeout("$.fancybox.close()", 1000);
-              });
-            }
-          }
-        });
-      }
-    });
-  });
-</script>
+    <ul class="footer-social">
+      <li>
+        <a href="https://instagram.com/shinyleo_tribe" class="social-icon__link" target="_blank" aria-label="Instagram">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1 1 0 100 2 1 1 0 000-2z" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/shinyleo.tribe" class="social-icon__link" target="_blank"
+          aria-label="Facebook">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7A10 10 0 0022 12z" />
+          </svg>
+        </a>
+      </li>
 
-</main>
+    </ul>
 
-    <footer class = "footer">
+    <p>&copy; 2025 Мой проект. Все права защищены.</p>
+  </footer>
 
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
-        <li class="menu__item"><a class="menu__link" href="kontakt.html"/> Контакты </a></li>
-        <li class="menu__item"><a class="menu__link" href="help.html"> Помощь </a></li>
-      </ul>
-
-      <ul class="social-icon">
-        <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/shinyleo.tribe">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a></li>
-        <li class="social-icon__item"><a class="social-icon__link" href="https://vk.com/club211179648">
-          <ion-icon name="logo-vk"></ion-icon>
-        </a></li>
-        <li class="social-icon__item"><a class="social-icon__link" href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Finstagram.com%2Fshinyleo_tribe%3Figshid%3DYmMyMTA2M2Y%3D">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a></li>
-      </ul>
-
-    </footer>
+  <script src="js/kontakt.js" defer></script>
 </body>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
