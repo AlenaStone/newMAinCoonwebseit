@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — ShinyLeo Tribe</title>
+    <link href="../css/kontakt.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header-main">
+        <header class="main-header">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><img src="../img/logo.png" alt="Logo" /></a>
+                </div>
+
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav class="menu">
+                    <a href="index.html">Home</a>
+                    <a href="cats_en.html">Breeders</a>
+                    <a href="help_en.html">Help</a>
+                    <a href="about_en.html">About Us</a>
+                    <a href="kontakt_en.html">Contact</a>
+                </nav>
+
+                <ul class="language-switcher">
+                    <li><a href="../kontakt.html">RU</a></li>
+                    <li><a href="kontakt_en.html" class="active">EN</a></li>
+                    <li><a href="../GermanVersion/kontakt_de.html">DE</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="contact-container">
+            <h1>Contact Us</h1>
+            <p>If you have questions about kittens, cooperation, or just want to learn more, fill out the form below. We’ll be sure to respond!</p>
+
+            <form action="https://formspree.io/f/xgvkreqp" method="POST" class="contact-form" id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="e.g., Svetlana" required>
+
+                <label for="number">Your Phone Number:</label>
+                <input type="number" id="number" name="number" placeholder="+7 xxx xxx-xx-xx" required>
+
+                <label for="topic">What is your question about?</label>
+                <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="availability">Questions about available cats</option>
+                    <option value="info">Requesting information</option>
+                    <option value="care">Questions about care</option>
+                    <option value="chosen">We’ve chosen a cat</option>
+                </select>
+
+                <div id="chosenCatField" style="display: none;">
+                    <label for="catName">Chosen Cat:</label>
+                    <input type="text" id="catName" name="catName" placeholder="Cat’s name or photo link">
+                </div>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message..." required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer-nav">
+            <li class="menu__item"><a class="menu__link" href="about_en.html">About Us</a></li>
+            <li class="menu__item"><a class="menu__link" href="kontakt_en.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="help_en.html">Help</a></li>
+        </ul>
+
+        <ul class="footer-social">
+            <li>
+                <a href="https://instagram.com/shinyleo_tribe" class="social-icon__link" target="_blank" aria-label="Instagram">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1 1 0 100 2 1 1 0 000-2z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/shinyleo.tribe" class="social-icon__link" target="_blank" aria-label="Facebook">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7A10 10 0 0022 12z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+        <p>© 2025 My Project. All rights reserved.</p>
+        <p>Alena Vodopianova</p>
+    </footer>
+
+    <script src="../js/kontakt.js" defer></script>
+</body>
+
+</html>

@@ -18,7 +18,8 @@
 .logo {
   display: flex;
   align-items: center;
-  flex-grow: 0; /* Убираем растяжение логотипа */
+  flex-grow: 0;
+  /* Убираем растяжение логотипа */
 }
 
 .logo img {
@@ -71,16 +72,42 @@
   transition: all 0.3s ease;
 }
 
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.language-switcher li {
+  list-style: none;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+}
+
+.language-switcher a.active {
+  font-weight: bold;
+  pointer-events: none;
+}
+
 /* Медиа-запросы для бургер-меню */
 @media (max-width: 768px) {
   .logo img {
-    height: 100px !important; /* Уменьшаем логотип */
-    padding-left:50px !important; /* Убираем отступ слева */;
+    height: 100px !important;
+    /* Уменьшаем логотип */
+    padding-left: 50px !important;
+    /* Убираем отступ слева */
+    ;
   }
 
   .header-top {
     padding: 12px 15px;
-    justify-content: space-between; /* Логотип слева, иконка справа */
+    justify-content: space-between;
+    /* Логотип слева, иконка справа */
     flex-wrap: wrap;
     position: relative;
     z-index: 1001;
@@ -94,7 +121,8 @@
     height: 20px;
     cursor: pointer;
     order: 1;
-    margin-left: auto; /* Иконка прижата вправо */
+    margin-left: auto;
+    /* Иконка прижата вправо */
     z-index: 1002;
   }
 
@@ -108,20 +136,22 @@
   .menu {
     display: none;
     width: 100%;
-   
-    flex-direction: column; /* Одна колонка */
+
+    flex-direction: column;
+    /* Одна колонка */
     gap: 8px;
     padding: 15px 20px;
-  
+
   }
 
-  .menu-toggle:checked ~ .menu {
+  .menu-toggle:checked~.menu {
     display: flex;
     animation: slideIn 0.3s ease forwards;
   }
 
   .menu a {
-    width: 100%; /* Полная ширина */
+    width: 100%;
+    /* Полная ширина */
     text-align: center;
     padding: 10px 15px;
     font-size: 1em;
@@ -134,15 +164,15 @@
     background: rgba(255, 255, 255, 0.15);
   }
 
-  .menu-toggle:checked + .menu-icon span:nth-child(1) {
+  .menu-toggle:checked+.menu-icon span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
-  .menu-toggle:checked + .menu-icon span:nth-child(2) {
+  .menu-toggle:checked+.menu-icon span:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle:checked + .menu-icon span:nth-child(3) {
+  .menu-toggle:checked+.menu-icon span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
   }
 
@@ -152,6 +182,7 @@
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -161,7 +192,8 @@
 
 @media (max-width: 480px) {
   .logo img {
-    height: 35px; /* Ещё меньше для узких экранов */
+    height: 35px;
+    /* Ещё меньше для узких экранов */
   }
 
   .header-top {
